@@ -38,9 +38,9 @@
     </dependencies>
 
     <properties>
-        <componentName>appointment</componentName>
-        <jiraProjectName>APPOINTDB</jiraProjectName>
-        <jiraComponentId></jiraComponentId>
+        <componentName>appointment-mydashboard</componentName>
+        <jiraProjectName>APPMYDASH</jiraProjectName>
+        <jiraComponentId>12296</jiraComponentId>
     </properties>
     <scm>
         <connection>scm:svn:http://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/applications/module-appointment-mydashboard</connection>
