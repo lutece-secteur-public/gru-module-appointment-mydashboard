@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><plug-in>
     <name>appointment-mydashboard</name>
-    <class>fr.paris.lutece.plugins.mydashboard.service.MyDashboardPlugin</class>
+    <class>fr.paris.lutece.portal.service.plugin.PluginDefaultImplementation</class>
     <version>1.0.0</version>
     <description>module.appointment.mydashboard.plugin.description</description>
     <documentation/>
