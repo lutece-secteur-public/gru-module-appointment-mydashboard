@@ -44,7 +44,6 @@ import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 
-
 /**
  * MyAppointmentDashboardComponent
  */
@@ -61,9 +60,9 @@ public class MyAppointmentDashboardComponent extends MyDashboardComponent
     {
         try
         {
-            return AppointmentApp.getMyAppointmentsXPage( request, request.getLocale(  ) );
+            return AppointmentApp.getMyAppointmentsXPage( request, request.getLocale( ) );
         }
-        catch ( UserNotSignedException e )
+        catch( UserNotSignedException e )
         {
             return StringUtils.EMPTY;
         }
@@ -73,7 +72,7 @@ public class MyAppointmentDashboardComponent extends MyDashboardComponent
      * {@inheritDoc}
      */
     @Override
-    public String getComponentId(  )
+    public String getComponentId( )
     {
         return DASHBOARD_COMPONENT_ID;
     }
