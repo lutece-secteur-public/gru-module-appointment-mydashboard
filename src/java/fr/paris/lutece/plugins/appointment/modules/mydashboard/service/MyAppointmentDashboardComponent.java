@@ -60,7 +60,7 @@ public class MyAppointmentDashboardComponent extends MyDashboardComponent
     {
         try
         {
-            return AppointmentApp.getMyAppointmentsXPage( request, request.getLocale( ) );
+            return AppointmentApp.getMyAppointmentsXPage( request, request.getLocale( ), null );
         }
         catch( UserNotSignedException e )
         {
