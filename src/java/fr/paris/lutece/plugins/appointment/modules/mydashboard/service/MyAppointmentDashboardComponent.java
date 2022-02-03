@@ -38,7 +38,7 @@ import fr.paris.lutece.plugins.mydashboard.service.MyDashboardComponent;
 import fr.paris.lutece.portal.service.i18n.I18nService;
 import fr.paris.lutece.portal.service.security.UserNotSignedException;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Locale;
 
@@ -49,6 +49,10 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class MyAppointmentDashboardComponent extends MyDashboardComponent
 {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 5522031658740421535L;
     private static final String MESSAGE_DASHBOARD_MY_APPOINTMENTS_DESCRIPTION = "module.appointment.mydashboard.dashboardMyAppointment.description";
     private static final String DASHBOARD_COMPONENT_ID = "mydashboard.dashboardMyAppointments";
 
