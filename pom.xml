@@ -10,7 +10,7 @@
     <groupId>fr.paris.lutece.plugins</groupId>
     <artifactId>module-appointment-mydashboard</artifactId>
     <packaging>lutece-plugin</packaging>
-    <version>3.0.1</version>
+    <version>3.0.2-SNAPSHOT</version>
     <name>Lutece Appointment MyDashboard module</name>
 
     <repositories>
@@ -47,7 +47,7 @@
         <connection>scm:git:https://github.com/lutece-secteur-public/gru-module-appointment-mydashboard.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-module-appointment-mydashboard.git</developerConnection>
         <url>https://github.com/lutece-secteur-public/gru-module-appointment-mydashboard.git</url>
-      <tag>module-appointment-mydashboard-3.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
     
 </project>
