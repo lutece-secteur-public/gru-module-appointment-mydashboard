@@ -38,15 +38,19 @@ import fr.paris.lutece.plugins.mydashboard.service.MyDashboardComponent;
 import fr.paris.lutece.portal.service.i18n.I18nService;
 import fr.paris.lutece.portal.service.security.UserNotSignedException;
 
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Locale;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * MyAppointmentDashboardComponent
  */
+@ApplicationScoped
+@Named
 public class MyAppointmentDashboardComponent extends MyDashboardComponent
 {
     /**
@@ -64,7 +68,7 @@ public class MyAppointmentDashboardComponent extends MyDashboardComponent
     {
         try
         {
-            return AppointmentApp.getMyAppointmentsXPage( request, request.getLocale( ), null );
+            return AppointmentApp.getMyAppointmentsHtml( request, request.getLocale( ), null );
         }
         catch( UserNotSignedException e )
         {
