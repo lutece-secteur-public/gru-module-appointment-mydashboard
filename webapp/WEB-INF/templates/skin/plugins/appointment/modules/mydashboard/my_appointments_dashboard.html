@@ -1,4 +1,6 @@
-<#-- Panel "My appointments" of the dashboard: the list of the XPage my appointments, without its page -->
+<#-- Panel "My appointments" of the dashboard: a titled card, as the other components, holding the list of the XPage my appointments without its page -->
 <@cTpl>
-<#include "/skin/plugins/appointment/my_appointments_list.html" />
+<@cCard class='secondary' title='#i18n{appointment.myAppointments.name}'>
+	<#include "/skin/plugins/appointment/my_appointments_list.html" />
+</@cCard>
 </@cTpl>
