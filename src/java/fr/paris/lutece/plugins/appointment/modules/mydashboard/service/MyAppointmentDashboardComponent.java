@@ -37,6 +37,7 @@ import fr.paris.lutece.plugins.appointment.web.AppointmentApp;
 import fr.paris.lutece.plugins.mydashboard.service.MyDashboardComponent;
 import fr.paris.lutece.portal.service.i18n.I18nService;
 import fr.paris.lutece.portal.service.security.UserNotSignedException;
+import fr.paris.lutece.portal.service.template.AppTemplateService;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Named;
@@ -44,7 +45,9 @@ import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * MyAppointmentDashboardComponent
@@ -59,6 +62,8 @@ public class MyAppointmentDashboardComponent extends MyDashboardComponent
     private static final long serialVersionUID = 5522031658740421535L;
     private static final String MESSAGE_DASHBOARD_MY_APPOINTMENTS_DESCRIPTION = "module.appointment.mydashboard.dashboardMyAppointment.description";
     private static final String DASHBOARD_COMPONENT_ID = "mydashboard.dashboardMyAppointments";
+    // The list of the appointments, without the page around it (breadcrumb, title) of the XPage
+    private static final String TEMPLATE_MY_APPOINTMENTS_DASHBOARD = "/skin/plugins/appointment/modules/mydashboard/my_appointments_dashboard.html";
 
     /**
      * {@inheritDoc}
@@ -68,7 +73,12 @@ public class MyAppointmentDashboardComponent extends MyDashboardComponent
     {
         try
         {
-            return AppointmentApp.getMyAppointmentsHtml( request, request.getLocale( ), null );
+            Map<String, Object> model = new HashMap<>( );
+            if ( !AppointmentApp.fillMyAppointmentsModel( request, model ) )
+            {
+                return null;
+            }
+            return AppTemplateService.getTemplate( TEMPLATE_MY_APPOINTMENTS_DASHBOARD, request.getLocale( ), model ).getHtml( );
         }
         catch( UserNotSignedException e )
         {
