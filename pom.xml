@@ -10,7 +10,7 @@
     <groupId>fr.paris.lutece.plugins</groupId>
     <artifactId>module-appointment-mydashboard</artifactId>
     <packaging>lutece-plugin</packaging>
-    <version>3.0.2-beta-01</version>
+    <version>3.0.2</version>
     <name>Lutece Appointment MyDashboard module</name>
 
     <repositories>
